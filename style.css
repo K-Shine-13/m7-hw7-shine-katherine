@@ -144,14 +144,26 @@ section.hero > button {
   border-radius: 12px;
   text-transform: uppercase;
   cursor: pointer;
-  transition: transform 0.3s ease
+  color: var(--off-white);
+  font-weight: 600;
+  transition: transform 0.25s ease, box-shadow 0.3s ease;
 }
 
 section.hero > button:hover {
   transform: scale(1.1);
-  background-color: var(--primary-color);
+  animation: hoverColorShift 0.5s ease-in-out forwards;
 }
 
+/* keyframe color shift animation*/
+@keyframes hoverColorShift {
+  0% {
+    background-color: var(--secondary-color);
+  }
+
+  100% {
+    background-color: var(--primary-color);
+  }
+}
 /* End of Section Hero Button Transitions */
 
 main article {
